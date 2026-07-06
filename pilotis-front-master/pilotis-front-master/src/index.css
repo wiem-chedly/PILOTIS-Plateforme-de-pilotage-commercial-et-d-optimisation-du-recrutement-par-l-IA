@@ -1,0 +1,191 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 20% 98%;
+    --foreground: 215 50% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 215 50% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 50% 15%;
+
+    --primary: 224 80% 40%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 214 32% 94%;
+    --secondary-foreground: 215 50% 15%;
+
+    --muted: 214 32% 94%;
+    --muted-foreground: 215 16% 47%;
+
+    --accent: 213 94% 55%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 224 80% 40%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 215 50% 18%;
+    --sidebar-foreground: 210 20% 90%;
+    --sidebar-primary: 213 94% 68%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 215 50% 24%;
+    --sidebar-accent-foreground: 210 20% 90%;
+    --sidebar-border: 215 40% 25%;
+    --sidebar-ring: 213 94% 55%;
+
+    --pilotis-navy: 215 50% 24%;
+    --pilotis-blue: 224 80% 40%;
+    --pilotis-sky: 213 94% 55%;
+    --pilotis-light: 213 94% 68%;
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 100%;
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+  }
+
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+}
+
+/* ── FullCalendar — thème Pilotis ─────────────────────────────────────────── */
+.fc-pilotis .fc {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 0.78rem;
+}
+
+/* Toolbar */
+.fc-pilotis .fc-toolbar {
+  padding: 6px 4px;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+.fc-pilotis .fc-toolbar-title {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: hsl(var(--foreground));
+}
+.fc-pilotis .fc-button {
+  background: hsl(var(--card)) !important;
+  border: 1px solid hsl(var(--border)) !important;
+  color: hsl(var(--foreground)) !important;
+  font-size: 0.72rem !important;
+  padding: 3px 8px !important;
+  border-radius: 6px !important;
+  box-shadow: none !important;
+}
+.fc-pilotis .fc-button:hover {
+  background: hsl(var(--muted)) !important;
+}
+.fc-pilotis .fc-button-active,
+.fc-pilotis .fc-button-primary:not(:disabled).fc-button-active {
+  background: hsl(var(--primary)) !important;
+  color: white !important;
+  border-color: hsl(var(--primary)) !important;
+}
+
+/* Grid */
+.fc-pilotis .fc-col-header-cell {
+  background: transparent !important;
+  color: hsl(var(--foreground));
+  font-weight: 600;
+  text-transform: capitalize;
+  padding: 8px 0;
+  border-bottom: 2px solid hsl(var(--border)) !important;
+  border-top: none !important;
+  border-left: none !important;
+  border-right: none !important;
+}
+.fc-pilotis .fc-daygrid-day-number {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: hsl(var(--muted-foreground));
+  padding: 4px;
+}
+.fc-pilotis .fc-day-today {
+  background: hsl(var(--emerald-500) / 0.02) !important;
+}
+.fc-pilotis .fc-day-today .fc-daygrid-day-number {
+  background: hsl(var(--primary));
+  color: white;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 4px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Events */
+.fc-pilotis .fc-event {
+  border-radius: 6px !important;
+  border: none !important;
+  margin-top: 3px !important;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%) !important;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+}
+.fc-pilotis .fc-event:hover {
+  transform: translateY(-1px) scale(1.02);
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.25);
+  z-index: 10;
+  opacity: 1 !important;
+}
+
+/* Borders - Floating Style */
+.fc-pilotis .fc-scrollgrid {
+  border: none !important;
+}
+.fc-pilotis td, .fc-pilotis th {
+  border-color: hsl(var(--border) / 0.5) !important;
+}
+
+/* Weekends & Holidays */
+.pilotis-weekend {
+  background: hsl(var(--muted)/0.3);
+}
+
+.pilotis-holiday {
+  background-color: hsl(var(--destructive)/0.04);
+}
+.pilotis-holiday .fc-daygrid-day-number {
+  color: hsl(var(--destructive)/0.8);
+  font-weight: 600;
+}
+.fc-pilotis td.fc-day.pilotis-holiday .fc-daygrid-day-frame {
+  position: relative;
+}
+.fc-pilotis td.fc-day.pilotis-holiday .fc-daygrid-day-frame::after {
+  content: 'FÉRIÉ';
+  position: absolute;
+  bottom: 6px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 0.55rem;
+  letter-spacing: 0.1em;
+  color: hsl(var(--destructive)/0.4);
+  font-weight: 600;
+  pointer-events: none;
+}

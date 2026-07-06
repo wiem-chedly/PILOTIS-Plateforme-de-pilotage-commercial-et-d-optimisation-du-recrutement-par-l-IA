@@ -1,0 +1,50 @@
+# Framework principal
+Flask==2.3.3
+Flask-SQLAlchemy==3.1.1
+Flask-Migrate==4.0.5
+Flask-CORS==4.0.1
+
+# Authentification & Sécurité
+Flask-JWT-Extended==4.5.3
+Flask-Bcrypt==1.0.1
+PyJWT==2.8.0
+cryptography==41.0.7
+
+# Base de données
+pg8000==1.31.2
+SQLAlchemy>=2.0.30
+alembic==1.12.1
+
+# Configuration & Utilitaires
+python-dotenv==1.0.0
+python-dateutil==2.8.2
+
+# APIs & Réseau
+requests==2.31.0
+httpx==0.25.2
+
+# Validation & Sérialisation
+marshmallow==3.20.1
+email-validator==2.1.0
+
+# Logging & Monitoring
+loguru==0.7.2
+
+# ── Scheduler (Wiem's feature) ────────────────────────────────────────────────
+APScheduler==3.10.4
+
+# ── LinkedIn OAuth (Wiem's feature) ──────────────────────────────────────────
+Flask-Dance==7.1.0
+
+# Utils divers
+click==8.1.7
+blinker==1.7.0
+gunicorn==21.2.0  # Pour production
+openpyxl==3.1.2
+ollama>=0.1.0     # For qwen AI deduplication service
+apify-client>=2.5.0  # For LinkedIn engagement scraping (likes/comments)
+
+# ── Google Sheets API (LinkedIn Form collector) ───────────────────────────────
+google-auth>=2.0.0
+google-auth-httplib2>=0.1.0
+google-api-python-client>=2.0.0
