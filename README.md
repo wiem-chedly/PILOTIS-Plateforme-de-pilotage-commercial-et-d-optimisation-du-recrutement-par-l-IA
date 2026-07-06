@@ -1,4 +1,4 @@
-<img width="1882" height="960" alt="image" src="https://github.com/user-attachments/assets/5c02425d-b264-4a20-b7e1-a9d6969d5e64" />PILOTIS - Plateforme de Pilotage Commercial et d'Optimisation du Recrutement par l'IA
+PILOTIS - Plateforme de Pilotage Commercial et d'Optimisation du Recrutement par l'IA
 
 📖 Présentation du Projet
 PILOTIS est une plateforme web intelligente développée pour centraliser, automatiser et suivre les activités commerciales à travers des KPI en temps réel.
@@ -31,7 +31,7 @@ Figure 2 : Tableau de bord avec KPIs en temps réel
 Figure 3 : Liste des appels d'offres synchronisés
 
 4. Interface de Publication LinkedIn
-<img width="1882" height="960" alt="image" src="https://github.com/user-attachments/assets/54214204-c64f-4c5f-ac22-85085229646c" />
+<img width="1882" height="960" alt="image" src="https://github.com/user-attachments/assets/5c02425d-b264-4a20-b7e1-a9d6969d5e64" />
 
 Figure 4 : Génération et validation de posts LinkedIn
 
